@@ -12,9 +12,8 @@ collections:
       - file: "index.html"
         label: "Contenu du Site"
         name: "index"
-        # C'est cette ligne qui permet de modifier directement dans le HTML
-        format: "html" 
+        # On force le CMS à ne pas créer de bandeau en haut
+        format: "fragment" 
         fields:
           - {label: "Plat du Jour", name: "plat_du_jour", widget: "string"}
           - {label: "Prix Plat du Jour", name: "prix_plat_jour", widget: "string"}
-          - {label: "Entrée 1", name: "entree_1", widget: "string"}
