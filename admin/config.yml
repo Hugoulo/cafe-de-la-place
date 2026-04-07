@@ -10,8 +10,11 @@ collections:
     label: "Données du site"
     files:
       - file: "plat.json"
-        label: "Plat du Jour"
-        name: "plat"
+        label: "La Carte"
+        name: "carte"
         fields:
-          - {label: "Nom du Plat", name: "plat_du_jour", widget: "string"}
-          - {label: "Prix", name: "prix_plat_jour", widget: "string"}
+          - {label: "Nom du Plat du Jour", name: "plat_du_jour", widget: "string"}
+          - {label: "Prix Plat du Jour", name: "prix_plat_jour", widget: "string"}
+          - {label: "Les Entrées", name: "entrees", widget: "text", hint: "Séparez par un retour à la ligne"}
+          - {label: "Les Plats", name: "plats", widget: "text", hint: "Séparez par un retour à la ligne"}
+          - {label: "Les Desserts", name: "desserts", widget: "text", hint: "Séparez par un retour à la ligne"}
