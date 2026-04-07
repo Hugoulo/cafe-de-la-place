@@ -12,8 +12,8 @@ collections:
       - file: "index.html"
         label: "Contenu du Site"
         name: "index"
-        # On force le CMS à ne pas créer de bandeau en haut
-        format: "fragment" 
+        # On utilise le format 'html' avec une recherche précise
+        format: "html"
         fields:
           - {label: "Plat du Jour", name: "plat_du_jour", widget: "string"}
           - {label: "Prix Plat du Jour", name: "prix_plat_jour", widget: "string"}
