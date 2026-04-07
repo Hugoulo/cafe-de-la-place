@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images" # Où stocker les images si elle en télécharge
+public_folder: "/images"
+
+collections:
+  - name: "carte"
+    label: "La Carte"
+    files:
+      - file: "index.html"
+        label: "Contenu du Site"
+        name: "index"
+        fields:
+          - {label: "Plat du Jour", name: "plat_du_jour", widget: "string"}
+          - {label: "Prix Plat du Jour", name: "prix_plat_jour", widget: "string"}
+          - {label: "Entrée 1", name: "entree_1", widget: "string"}
+          # Ajoute ici tous les champs que tu veux qu'elle puisse modifier
