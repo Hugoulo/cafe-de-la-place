@@ -6,14 +6,12 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: "carte"
-    label: "La Carte"
+  - name: "donnees"
+    label: "Données du site"
     files:
-      - file: "index.html"
-        label: "Contenu du Site"
-        name: "index"
-        # On utilise le format 'html' avec une recherche précise
-        format: "html"
+      - file: "plat.json"
+        label: "Plat du Jour"
+        name: "plat"
         fields:
-          - {label: "Plat du Jour", name: "plat_du_jour", widget: "string"}
-          - {label: "Prix Plat du Jour", name: "prix_plat_jour", widget: "string"}
+          - {label: "Nom du Plat", name: "plat_du_jour", widget: "string"}
+          - {label: "Prix", name: "prix_plat_jour", widget: "string"}
