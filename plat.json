@@ -1,7 +1,12 @@
 {
   "plat_du_jour": "Sauté de veau à la Normande, riz pilaf",
-  "prix_plat_jour": "14.50€",
-  "entrees": "Escargots de l'Eure (x6)\nTerrine de Campagne Maison\nCamembert Rôti au Miel\nŒuf Cocotte à la Crème\nAssiette de Jambon Cru",
-  "plats": "Faux-filet Normand (VBF)\nAndouillette Sauce Moutarde\nBurger 'La Place' & Frites\nDos de Cabillaud au Beurre\nConfit de Canard Maison",
-  "desserts": "Mousse au Chocolat Noir\nTarte Tatin & Crème Fraîche\nCrème Brûlée Vanille\nÎle Flottante aux Amandes\nCafé Gourmand (3 pièces)"
+  "entrees": "Escargots de l'Eure (x6)\nTerrine de Campagne Maison",
+  "plats": "Faux-filet Normand (VBF)\nAndouillette Sauce Moutarde",
+  "desserts": "Mousse au Chocolat Noir\nTarte Tatin",
+  "f_midi_complet": "18.90€",
+  "f_midi_duo": "16.00€",
+  "f_midi_plat": "14.00€",
+  "f_soir_complet": "21.90€",
+  "f_soir_duo": "18.00€",
+  "f_soir_plat": "16.00€"
 }

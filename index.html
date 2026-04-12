@@ -42,39 +42,67 @@
             <div class="h-px bg-orange-800 w-16 mx-auto my-4"></div>
             
             <p class="text-lg font-light" id="display-plat">Chargement...</p>
-            <p class="mt-3 font-serif text-xl italic" id="display-prix">--</p>
-        </div>
+            </div>
     </section>
 
     <section class="max-w-7xl mx-auto px-6 py-16">
         <div class="grid lg:grid-cols-3 gap-8">
             <div class="bg-white p-8 shadow-sm border border-stone-100 text-center">
-                <h3 class="text-2xl text-orange-900 border-b pb-4 mb-2 italic">Les Entrées</h3>
-                <p class="text-orange-900 font-serif italic text-xl mb-8">5€</p>
+                <h3 class="text-2xl text-orange-900 border-b pb-4 mb-8 italic">Les Entrées</h3>
                 <div class="space-y-4 font-bold uppercase text-xs tracking-tight whitespace-pre-line" id="display-entrees">
-                    </div>
+                </div>
             </div>
 
             <div class="bg-white p-8 shadow-sm border border-stone-100 text-center">
-                <h3 class="text-2xl text-orange-900 border-b pb-4 mb-2 italic">Les Plats</h3>
-                <p class="text-orange-900 font-serif italic text-xl mb-8">14€</p>
+                <h3 class="text-2xl text-orange-900 border-b pb-4 mb-8 italic">Les Plats</h3>
                 <div class="space-y-4 font-bold uppercase text-xs tracking-tight whitespace-pre-line" id="display-plats">
-                    </div>
+                </div>
             </div>
 
             <div class="bg-white p-8 shadow-sm border border-stone-100 text-center">
-                <h3 class="text-2xl text-orange-900 border-b pb-4 mb-2 italic">Les Desserts</h3>
-                <p class="text-orange-900 font-serif italic text-xl mb-8">5€</p>
+                <h3 class="text-2xl text-orange-900 border-b pb-4 mb-8 italic">Les Desserts</h3>
                 <div class="space-y-4 font-bold uppercase text-xs tracking-tight whitespace-pre-line" id="display-desserts">
-                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="max-w-3xl mx-auto mt-12 bg-white p-8 border border-stone-100 shadow-sm text-center">
-            <h3 class="text-2xl text-orange-900 border-b pb-4 mb-8 italic">Nos Formules</h3>
-            <div class="grid md:grid-cols-2 gap-8 text-3xl font-serif text-orange-900 italic">
-                <div class="md:border-r border-stone-100">17.50€<span class="text-[10px] not-italic font-sans text-stone-500 uppercase tracking-widest block mt-2">Entrée + Plat ou Plat + Dessert</span></div>
-                <div>20.00€<span class="text-[10px] not-italic font-sans text-stone-500 uppercase tracking-widest block mt-2">Entrée + Plat + Dessert</span></div>
+        <div class="max-w-4xl mx-auto mt-12 bg-white p-8 border border-stone-100 shadow-sm">
+            <h3 class="text-2xl text-orange-900 border-b pb-4 mb-8 italic text-center">Nos Formules</h3>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="text-center md:border-r border-stone-100 md:pr-12">
+                    <h4 class="uppercase tracking-widest text-xs font-bold text-stone-400 mb-6">Service du Midi</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <span class="text-3xl font-serif text-orange-900 italic" id="f_midi_complet">--</span>
+                            <span class="text-[10px] block uppercase text-stone-500 mt-1">Entrée + Plat + Dessert</span>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-serif text-orange-900 italic" id="f_midi_duo">--</span>
+                            <span class="text-[10px] block uppercase text-stone-500 mt-1">Entrée + Plat ou Plat + Dessert</span>
+                        </div>
+                        <div>
+                            <span class="text-xl font-serif text-orange-900 italic" id="f_midi_plat">--</span>
+                            <span class="text-[10px] block uppercase text-stone-500 mt-1">Plat Principal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h4 class="uppercase tracking-widest text-xs font-bold text-stone-400 mb-6">Service du Soir</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <span class="text-3xl font-serif text-orange-900 italic" id="f_soir_complet">--</span>
+                            <span class="text-[10px] block uppercase text-stone-500 mt-1">Entrée + Plat + Dessert</span>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-serif text-orange-900 italic" id="f_soir_duo">--</span>
+                            <span class="text-[10px] block uppercase text-stone-500 mt-1">Entrée + Plat ou Plat + Dessert</span>
+                        </div>
+                        <div>
+                            <span class="text-xl font-serif text-orange-900 italic" id="f_soir_plat">--</span>
+                            <span class="text-[10px] block uppercase text-stone-500 mt-1">Plat Principal</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -117,10 +145,17 @@
             .then(response => response.json())
             .then(data => {
                 document.getElementById('display-plat').innerText = data.plat_du_jour;
-                document.getElementById('display-prix').innerText = data.prix_plat_jour;
                 document.getElementById('display-entrees').innerText = data.entrees;
                 document.getElementById('display-plats').innerText = data.plats;
                 document.getElementById('display-desserts').innerText = data.desserts;
+                
+                // Remplissage des prix des formules
+                document.getElementById('f_midi_complet').innerText = data.f_midi_complet;
+                document.getElementById('f_midi_duo').innerText = data.f_midi_duo;
+                document.getElementById('f_midi_plat').innerText = data.f_midi_plat;
+                document.getElementById('f_soir_complet').innerText = data.f_soir_complet;
+                document.getElementById('f_soir_duo').innerText = data.f_soir_duo;
+                document.getElementById('f_soir_plat').innerText = data.f_soir_plat;
             })
             .catch(err => {
                 console.error("Erreur de chargement JSON:", err);

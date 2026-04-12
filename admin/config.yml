@@ -18,3 +18,9 @@ collections:
           - {label: "Les Entrées", name: "entrees", widget: "text", hint: "Séparez par un retour à la ligne"}
           - {label: "Les Plats", name: "plats", widget: "text", hint: "Séparez par un retour à la ligne"}
           - {label: "Les Desserts", name: "desserts", widget: "text", hint: "Séparez par un retour à la ligne"}
+          - {label: "Prix Midi (Complet)", name: "f_midi_complet", widget: "string"}
+          - {label: "Prix Midi (Entrée/Plat)", name: "f_midi_duo", widget: "string"}
+          - {label: "Prix Midi (Plat seul)", name: "f_midi_plat", widget: "string"}
+          - {label: "Prix Soir (Complet)", name: "f_soir_complet", widget: "string"}
+          - {label: "Prix Soir (Entrée/Plat)", name: "f_soir_duo", widget: "string"}
+          - {label: "Prix Soir (Plat seul)", name: "f_soir_plat", widget: "string"}
